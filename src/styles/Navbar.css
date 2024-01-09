@@ -10,3 +10,27 @@
 .scrolled #icons {
   color: #333;
 }
+
+.menuHover {
+  text-decoration: none;
+
+  display: inline-block;
+  position: relative;
+}
+.menuHover:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #0000ff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.menuHover:hover:after {
+  width: 100%;
+  left: 0;
+  color: #0000ff;
+}

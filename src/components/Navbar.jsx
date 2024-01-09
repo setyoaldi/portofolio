@@ -12,6 +12,12 @@ const Navbar = () => {
   const handleNavIcon = () => {
     setNav(!nav);
   };
+  const hoverOptions = {
+    style: {
+      borderBottom: "2px solid #ff0000",
+      transition: "width 0.5s ease",
+    },
+  };
 
   const handleClick = () => setNav(!nav);
 
@@ -42,27 +48,37 @@ const Navbar = () => {
       <div className="hidden md:block blockNav">
         <ul className="flex justify-between items-center w-full">
           <li className="py-2 px-4 hover:text-blue-500 cursor-pointer">
-            <Link to="home" smooth={true} duration={500}>
+            <Link to="home" className="menuHover" smooth={true} duration={500}>
               Home
             </Link>
           </li>
           <li className="py-2 px-4 hover:text-blue-500 cursor-pointer">
-            <Link to="about" smooth={true} duration={500}>
+            <Link to="about" className="menuHover" smooth={true} duration={500}>
               About
             </Link>
           </li>
           <li className="py-2 px-4 hover:bg-[#0fd9a] hover:text-blue-500 cursor-pointer">
-            <Link to="skills" smooth={true} duration={500}>
+            <Link
+              to="skills"
+              className="menuHover"
+              smooth={true}
+              duration={500}
+            >
               Skills
             </Link>
           </li>
           <li className="py-2 px-4 hover:bg-[#0fd9a] hover:text-blue-500 cursor-pointer">
-            <Link to="work" smooth={true} duration={500}>
+            <Link to="work" className="menuHover" smooth={true} duration={500}>
               Work
             </Link>
           </li>
           <li className="py-2 px-4 hover:bg-[#0fd9a] hover:text-blue-500 cursor-pointer">
-            <Link to="contact" smooth={true} duration={500}>
+            <Link
+              to="contact"
+              className="menuHover"
+              smooth={true}
+              duration={500}
+            >
               Contact
             </Link>
           </li>
